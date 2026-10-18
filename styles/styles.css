@@ -172,7 +172,7 @@ body {
 
 /* Hero секция */
 .hero {
-  padding: 50px 371px 79px;
+  padding: 51px 371px 78px;
   background-image: url("../images/welcome-divider.svg"), url("../images/welcome-background.jpg");
   background-color: #aec4dc;
   background-repeat: no-repeat, no-repeat;
@@ -182,7 +182,7 @@ body {
 
 /* Секция преимущества (главная страница) */
 .advantages-block {
-  padding: 70px 270px 89px;
+  padding: 70px 270px 90px;
   text-align: center;
 }
 
@@ -222,6 +222,7 @@ body {
 }
 
 .advantages-item {
+  min-height: 385px;
   width: 400px;
   padding: 113px 85px 112px;
   text-align: center;
@@ -263,8 +264,8 @@ body {
 
 .advantages-item .item-title {
   position: relative;
-  padding-bottom: 30px;
-  margin-bottom: 32px;
+  padding-bottom: 29px;
+  margin-bottom: 31px;
 }
 
 .advantages-item .item-title::after {
@@ -274,6 +275,7 @@ body {
   margin-left: -30px;
   width: 60px;
   height: 2px;
+  transform: translateY(50%);
   background-color: currentColor;
   opacity: 0.3;
   content: "";
@@ -812,6 +814,7 @@ body {
 }
 
 .hotels-card-photo {
+  width: 100%;
   margin-bottom: 16px;
 }
 
@@ -892,17 +895,13 @@ body {
 }
 
 .pagination-item {
+  min-width: 60px;
   text-align: center;
-}
-
-.pagination-item:not(:has(a)) {
-  width: 60px;
 }
 
 .pagination-link {
   display: block;
   padding: 11px;
-  min-width: 60px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -914,13 +913,13 @@ body {
   border: 1px solid transparent;
 }
 
-.pagination-item:hover a:not(.pagination-link-current),
-.pagination-item:focus-visible a:not(.pagination-link-current) {
+.pagination-item:hover .pagination-link:not(.pagination-link-current),
+.pagination-item:focus-visible .pagination-link:not(.pagination-link-current) {
   border-color: #82b3d3;
   background-color: #68a2ca;
 }
 
-.pagination-item:active a:not(.pagination-link-current) {
+.pagination-item:active .pagination-link:not(.pagination-link-current) {
   color: rgba(255, 255, 255, 0.3);
   background-color: #82b3d3;
 }
