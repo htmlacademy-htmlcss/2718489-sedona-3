@@ -129,6 +129,8 @@ body {
 .nav-user-list {
   display: flex;
   flex-wrap: wrap;
+  min-width: 88px;
+  max-width: 220px;
   align-items: center;
   padding: 0;
   margin: 0;
@@ -540,6 +542,11 @@ body {
   outline: 3px solid #83b3d3;
 }
 
+.control-input:disabled + .control-mark,
+.control-input:disabled ~ .control-label {
+  opacity: 0.3;
+}
+
 .control:active {
   opacity: 0.3;
 }
@@ -636,7 +643,7 @@ body {
 }
 
 .catalog-filter-buttons {
-  align-self: flex-end;
+  padding-top: 56px;
 }
 
 .catalog-filter-buttons button {
@@ -752,7 +759,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  max-width: 328px;
+  flex: 0 0 160px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -940,7 +947,8 @@ body {
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 288px;
+  min-width: 144px;
+  max-width: 240px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -966,7 +974,7 @@ body {
 .footer-contact-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  text-align: center;
 }
 
 .footer-contact-number {
@@ -974,7 +982,6 @@ body {
   line-height: 40px;
   color: #000000;
   text-decoration: none;
-  white-space: nowrap;
 }
 
 .footer-contact-number:hover,
@@ -1102,15 +1109,10 @@ body {
   height: 100%;
   width: 100%;
   background-color: rgba(242, 242, 242, 0.8);
-  visibility: hidden;
 }
 
-.modal-visible {
-  visibility: visible;
-}
-
-.modal-container:target {
-  visibility: visible;
+.modal-hidden {
+  display: none;
 }
 
 .modal {
